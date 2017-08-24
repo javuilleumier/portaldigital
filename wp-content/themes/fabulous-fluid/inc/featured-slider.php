@@ -103,8 +103,8 @@ function fabulous_fluid_demo_slider() {
 	$excerpt_more_text	= apply_filters( 'fabulous_fluid_get_option', 'excerpt_more_text' );
 
 	return '
-	<a class="slider-box first" title="' . esc_html__( 'Inicio', 'fabulous-fluid' ) . '" href="'. esc_url( home_url( '/' ) ) .'" data-cycle-pager-template="<div class=\'thumbnail thumbnail-1\'><span class=\'cover\'></span><h2>' . esc_html__( 'Inicio', 'fabulous-fluid' ) . '</h2><img src=\''.get_template_directory_uri().'/images/banner_inicio.jpg\'></div>">
-		<img src="' . get_template_directory_uri() . '/images/banner_inicio.jpg" class="wp-post-image" alt="' . esc_html__( 'Inicio', 'fabulous-fluid' ) . '" title="' . esc_html__( 'Inicio', 'fabulous-fluid' ) . '">
+	<a class="slider-box first" title="' . esc_html__( 'Inicio', 'fabulous-fluid' ) . '" href="'. esc_url( home_url( '/' ) ) .'" data-cycle-pager-template="<div class=\'thumbnail thumbnail-1\'><span class=\'cover\'></span><h2>' . esc_html__( 'Inicio', 'fabulous-fluid' ) . '</h2><img src=\''.get_template_directory_uri().'/images/banner_inicio_02.jpg\'></div>">
+		<img src="' . get_template_directory_uri() . '/images/banner_inicio_02.jpg" class="wp-post-image" alt="' . esc_html__( 'Inicio', 'fabulous-fluid' ) . '" title="' . esc_html__( 'Inicio', 'fabulous-fluid' ) . '">
 		
 	</a><!-- .slider-box -->
 
@@ -113,7 +113,7 @@ function fabulous_fluid_demo_slider() {
 		
 	</a><!-- .slider-box -->
 
-	<a class="slider-box" title="' . esc_html__( 'Experiencias', 'fabulous-fluid' ). '"target=_blank href="'. esc_url(('https://apps.na.collabserv.com/communities/service/html/community/updates?communityUuid=3264ddd5-f968-4eef-8e5c-5780ef455f7f&filter=all') ) .'" data-cycle-pager-template="<div class=\'thumbnail thumbnail-3\'><span class=\'cover\'></span><h2>' . esc_html__( 'Experiencias', 'fabulous-fluid' ) . '</h2><img src=\''.get_template_directory_uri().'/images/banner_experiencias_01.jpg\'></div>">
+	<a class="slider-box" title="' . esc_html__( 'Experiencias', 'fabulous-fluid' ) . '"target=_blank href="'. esc_url( home_url( '/' ) ) .'" href="'. esc_url( home_url( '/' ) ) .'" data-cycle-pager-template="<div class=\'thumbnail thumbnail-3\'><span class=\'cover\'></span><h2>' . esc_html__( 'Experiencias', 'fabulous-fluid' ) . '</h2><img src=\''.get_template_directory_uri().'/images/banner_experiencias_01.jpg\'></div>">
 		<img src="' . get_template_directory_uri() . '/images/banner_experiencias_01.jpg" class="wp-post-image" alt="' . esc_html__( 'Experiencias', 'fabulous-fluid' ) . '" title="' . esc_html__( 'Experiencias', 'fabulous-fluid' ) . '">
 		<div class="caption">
 			<span class="vcenter">
@@ -122,7 +122,7 @@ function fabulous_fluid_demo_slider() {
 		</div><!-- .caption -->
 	</a><!-- .slider-box -->
 
-	<a class="slider-box" title="' . esc_html__( 'Comparte', 'fabulous-fluid' ) . '"target=_blank href="'. esc_url(( 'https://apps.na.collabserv.com/communities/service/html/communitystart?communityUuid=a7b41a93-739d-4467-85b6-d5ee8187d574' ) ) .'" data-cycle-pager-template="<div class=\'thumbnail thumbnail-4\'><span class=\'cover\'></span><h2>' . esc_html__( 'Comparte', 'fabulous-fluid' ) . '</h2><img src=\''.get_template_directory_uri().'/images/banner_comparte_01.jpg\'></div>">
+	<a class="slider-box" title="' . esc_html__( 'Comparte', 'fabulous-fluid' ). '"target=_blank href="'. esc_url( ( 'https://apps.na.collabserv.com/communities/service/html/communitystart?communityUuid=a7b41a93-739d-4467-85b6-d5ee8187d574' target="_blank" ) ) .'" data-cycle-pager-template="<div class=\'thumbnail thumbnail-4\'><span class=\'cover\'></span><h2>' . esc_html__( 'Comparte', 'fabulous-fluid' ) . '</h2><img src=\''.get_template_directory_uri().'/images/banner_comparte_01.jpg\'></div>">
 		<img src="' . get_template_directory_uri() . '/images/banner_comparte_01.jpg" class="wp-post-image" alt="' . esc_html__( 'Comparte', 'fabulous-fluid' ) . '" title="' . esc_html__( 'Comparte', 'fabulous-fluid' ) . '">
 		<div class="caption">
 			<span class="vcenter">
@@ -131,7 +131,7 @@ function fabulous_fluid_demo_slider() {
 		</div><!-- .caption -->
 	</a><!-- .slider-box -->
 
-	<a class="slider-box" title="' . esc_html__( 'Kit Digital', 'fabulous-fluid' ) . '"target=_blank href="'. esc_url(( 'https://apps.na.collabserv.com/communities/service/html/communityoverview?communityUuid=3264ddd5-f968-4eef-8e5c-5780ef455f7f#fullpageWidgetId=Wa89fc8d16b6a_4c7c_b558_c606b14ce323&section=folders')) .'" data-cycle-pager-template="<div class=\'thumbnail thumbnail-5\'><span class=\'cover\'></span><h2>' . esc_html__( 'Kit Digital', 'fabulous-fluid' ) . '</h2><img src=\''.get_template_directory_uri().'/images/banner_kit_digital_01.jpg\'></div>">
+	<a class="slider-box" title="' . esc_html__( 'Kit Digital', 'fabulous-fluid' ) . '"target=_blank href="'. esc_url( ( 'https://apps.na.collabserv.com/communities/service/html/communitystart?communityUuid=3264ddd5-f968-4eef-8e5c-5780ef455f7f#fullpageWidgetId=Wa89fc8d16b6a_4c7c_b558_c606b14ce323&folder=450b7935-2cd2-4720-a722-a747c89bc873' ) ) .'" data-cycle-pager-template="<div class=\'thumbnail thumbnail-5\'><span class=\'cover\'></span><h2>' . esc_html__( 'Kit Digital', 'fabulous-fluid' ) . '</h2><img src=\''.get_template_directory_uri().'/images/banner_kit_digital_01.jpg\'></div>">
 		<img src="' . get_template_directory_uri() . '/images/banner_kit_digital_01.jpg" class="wp-post-image" alt="' . esc_html__( 'Kit Digital', 'fabulous-fluid' ) . '" title="' . esc_html__( 'Kit Digital', 'fabulous-fluid' ) . '">
 		<div class="caption">
 			<span class="vcenter">
