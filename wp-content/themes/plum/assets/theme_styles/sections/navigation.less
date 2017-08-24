@@ -1,0 +1,288 @@
+/* -------- Nav Menu ---------- */
+#site-navigation {
+	position: absolute;
+	bottom: 0;
+	width: 100%;	
+	margin-bottom: 0;
+	background: fade(black, 50%);
+	ul {
+		li {
+			a {
+				padding: 20px 12px;
+				color: white;
+				font-weight: 300;
+				font-size: 13px;
+				text-transform: uppercase;
+				.transition( 0.2s all ease );
+				
+			}
+			&:hover {
+				a {
+					background: fade(black,60%);
+				}
+			}
+			ul li .menu-desc {
+				display: none;
+			}
+			ul.sub-menu, ul.children {
+				background: fade(black,60%);
+				bottom: 100%;
+				display: block;
+				.transition( 1s all ease );
+				perspective: 1000;
+				box-shadow: none;
+				-webkit-perspective: 1000;
+				transform-origin: bottom;
+				-webkit-transform-origin: bottom;
+				transform: perspective(350px) rotateX(40deg) translateY(-20px) scale(1.1);
+				-webkit-transform: perspective(350px) rotateX(40deg) translateY(-20px) scale(1.1);
+				-moz-transform: perspective(350px) rotateX(40deg);
+				opacity: 0;
+				visibility: hidden;
+				li ul {
+					transform-origin: left;
+					-webkit-transform-origin: left;
+					.transition( 0.4s all ease );
+					left: 100%;
+					top: auto;
+					bottom: 0;
+					opacity: 0;
+					visibility: hidden !important;
+					opacity: 0 !important;
+					-webkit-transform: rotateY(65deg) !important;
+					transform: rotateY(65deg) !important;
+					-moz-transform: rotateY(65deg) !important;
+					li ul {
+						display: none !important;
+					}
+				}
+				li:hover {
+					.transition(0.2s all ease);
+					/* -webkit-transition: 0.2s all ease !important; */
+					ul {
+						opacity: 1 !important;
+						visibility: visible !important;
+						transform: rotateY(5deg) !important;
+						-webkit-transform: rotateY(5deg) !important;
+						-moz-transform: rotateY(5deg) !important;
+					}
+				}
+				a {
+					padding: 7px 15px;
+					font-weight: 300;
+					font-size: 11px;
+					background: fade(lighten(black,12%),50%);
+					transition: 0.4s background ease, 0.6s padding ease;
+					&:hover {
+						background: black;
+					}
+				}
+				li {
+				}
+				li:nth-child(odd) {
+					a {
+						background: fade(lighten(black,8%),50%);
+						&:hover {
+							background: black;
+						}
+					}
+				}
+			}
+			&:hover {
+				.transition(0.4s all ease);
+				-webkit-transition: 0.4s all ease !important;
+				
+				ul.sub-menu, ul.children {
+					display: block;
+					transform: rotateX(0deg) translateY(0px) scale(1);
+					-webkit-transform: rotateX(0deg) translateY(0px) scale(1);
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+		/* for the Currently active page */
+		.current_page_item > a, .current-menu-item > a, .current_page_ancestor > a {
+			
+		}
+	}
+	.fa {
+		padding: 0 5px 0 0;
+	}
+	.menu-desc {
+		font-size: 12px;
+		font-weight: 300;
+		color: lighten(@onaccent,10%);
+		display: inline-block;
+		margin-top: -5px;
+		text-transform: lowercase;
+	}
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a {
+		
+	}
+	
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
+}
+
+.slicknav_menu {
+	display: none;
+}
+
+@media screen and (max-width: 767px) {
+	.slicknav_menu {
+		display: block;
+		position: relative;
+		    
+		.slicknav_menutxt {
+			margin-top: 2px;
+		} 
+	}
+	
+	.slicknav_nav {
+		background: #333;
+		    width: 100%;
+		    top: 46px;
+		    left: 0;
+		    position: absolute;
+		    z-index: 9;
+	}
+	#site-navigation ul.menu {
+		display: none;
+	}
+	.slicknav_nav {
+		.menu-desc {
+			display: none !important;
+		}
+		a {
+			color: darken(white,5%);
+			&:hover {
+				background: #333;
+				color: white;
+			}
+			.fa {
+				margin-right: 5px;
+			}
+		}
+		li:hover {
+				background: #333;
+				a { color: white; }
+		}
+		.slicknav_arrow {
+			display: none;
+		}
+	}
+	.slicknav_nav .slicknav_row:hover {
+		background: #333;
+	}
+	.slicknav_menu {
+		background: darken(#333,8%);
+		padding: 0 5px;
+	}
+	.slicknav_btn {
+		background: darken(#333,12%);
+		border: solid 1px darken(#333,5%);
+	}
+	.slicknav_menutxt {
+		color: white !important;
+		text-shadow: none !important;
+		font-weight: lighter !important;
+		float: right !important;
+	}
+	.slicknav_icon-bar {
+		background-color: #777 !important;
+		position: relative;
+		top: 2px;
+	}
+	.slicknav_menu .slicknav_icon {
+	    position: relative;
+	    left: -7px;
+	}
+	
+	
+}
+
+#site-navigation.single {
+	clear: both;
+	position: relative;
+	background: none;
+	margin-bottom: 40px;
+	ul li a {
+		color: @content;
+		font-weight: normal;
+		position: relative;
+		padding: 15px 15px;
+		.transition(0.2s all ease);
+		font-size: 14px;
+		&:after {
+			content: "";
+			position: absolute;
+			width: 60%;
+			margin-left: 20%;
+			left: 0;
+			bottom: 0;
+			height: 2px;
+			background: @accent;
+			.transition(0.4s all ease 0.2s);
+		}
+		&:hover {
+			background: darken(@background, 5%);
+			color: @content;
+			.transition(0.4s all ease 0.2s);
+			&:after {
+				.transform(translateY(-46px));
+				.transition(0.6s all ease);
+				background: darken(@accent, 10%);
+				height: 4px;
+			}
+		}
+	}
+	ul li ul {
+		position: absolute;
+		top: 100%;
+		.transition(0.4s all ease);
+		.transform(perspective(350px) rotateX(5deg) translateY(20px) scale(1));
+		li a {
+			background: darken(@background, 5%);;
+			color: @content;;
+			&:after {
+				content: none;
+			}
+			&:hover {
+				background: darken(@background, 8%);
+			}
+		}
+		li:nth-child(odd) {
+			a {
+				background: darken(@background, 5%);
+				&:hover {
+					background: darken(@background, 8%);
+				}
+			}
+				
+		}
+		li ul {
+			bottom: auto;
+			top: 0;
+		}	
+	}
+	ul li:hover {
+		ul {
+			.transition(0.7s all ease 0.2s);
+		}
+		a {
+			background: darken(@background, 5%);;
+			color: @content;
+			&:after {
+				.transform(translateY(-46px));
+				.transition(0.6s all ease);
+				background: darken(@accent, 10%);
+				height: 4px;
+			}
+		}
+	}
+}
+

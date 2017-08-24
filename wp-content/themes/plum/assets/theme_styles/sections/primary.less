@@ -1,0 +1,116 @@
+/* Single Posts Area */
+#primary {
+	padding: 0;
+}
+#primary-mono {
+	padding: 0 10px;
+	@media screen and (max-width:767px) {
+		padding-left: 10px;
+	}
+	.entry-header {
+		min-width: 100px;
+		overflow: auto;
+	}
+	h1.entry-title {
+		font-weight: normal;
+		color: @content;
+		font-size: 34px;
+		margin-top: 0px;
+		padding: 10px;
+		padding-left: 0;
+		margin-bottom: 0px;
+		&:after {
+			content: "";
+			display: block;
+			width: 10%;
+			height: 2px;
+			margin-top: 5px;
+			background: @accent;
+		}
+	}
+	.entry-meta, .entry-footer {
+		font-size: 12px;
+		padding-bottom: 7px;
+		overflow: auto;
+		a {
+			color: @content;
+			text-decoration: underline;
+			&:hover {
+				color: @accent;
+			}
+		}
+	}
+	.posted-on, .byline {
+		font-weight: 600;
+		display: block;
+		margin-left: 0;
+		font-size: 13px;
+		text-transform: uppercase;
+		margin-bottom: 6px;
+		color: @accent;
+		text-align: right;
+		a {
+			text-decoration: none;
+			color: @accent;
+			.title-font;
+		}
+	}
+	.entry-footer {
+		border-top: solid 1px darken(@background,5%);
+		border-bottom: solid 2px darken(@background, 10%);
+		padding-top: 7px;
+		margin-top: 25px;
+		.post-edit-link {
+			float: right;
+			
+		}
+		.cat-links {
+			margin-right: 6px;
+		}
+	}
+	
+	.entry-content {
+		color: @content;
+		line-height: 1.7em;
+		font-size: 14px;
+	}
+	.nav-links {
+		padding: 10px 0px;
+		padding-top: 20px;
+		border-bottom: solid 2px darken(@background, 10%);
+		overflow: auto;
+		img {
+			width: 90px; 
+			border: solid 5px darken(@background,5%);
+			border-radius: 3px;
+		}
+		.navl {
+			display: block;
+			clear: both;
+			padding: 10px 0;
+			a {
+				font-weight: normal;
+				.transition(0.4s all ease);
+				color: lighten(@content,10%);
+				font-style: italic;
+				&:hover {
+					color: @accent;
+				}
+			}
+		}
+		.nav-previous, .nav-next {
+			padding: 0;
+		}
+	}
+	.product .product_title {
+		display: none;
+	}
+}
+
+#primary-mono.page h1.entry-title:after {
+	display: none;
+}
+.edit-link {
+	display: inline-block;
+	float: right;
+}

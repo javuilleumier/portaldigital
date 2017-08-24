@@ -1,0 +1,43 @@
+/* featured Posts */
+.eta {
+	margin: 20px 0;
+	padding: 0;
+	margin-bottom: 80px;
+	margin-top: 15px;	
+	.fg-item-container {
+		padding: 0;
+		overflow: hidden;
+		position: relative;
+		@media screen and (max-width: 767px) {
+			text-align: center;	
+		}
+		.post-details {
+			position: absolute;
+			bottom: 0;
+			padding: 0;
+			width: 100%;
+			h3 {
+				text-align: center;
+				background: @accent;
+				color: @onaccent;
+				width: 100%;
+				padding: 15px 10px;
+				font-size: 15px;
+				font-style: italic;
+				margin: 0;
+				.transform(translateY(100%));
+				.transition(0.4s all ease);
+				@media screen and (max-width: 767px) {
+					.transform(translateY(0%));
+					padding: 10px;
+					background: fade(@accent, 75%);
+				}
+			}
+		}
+		&:hover {
+			.post-details h3 {
+				.transform(translateY(0%));
+			}
+		}
+	}
+}

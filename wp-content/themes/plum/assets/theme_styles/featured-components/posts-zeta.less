@@ -1,0 +1,42 @@
+.zeta {
+	margin-bottom: 60px;
+	display: block;
+	overflow: auto;
+	clear: both;
+	.fg-item-container {
+		padding: 2px;
+		position: relative;
+		img {
+			.transition(0.4s all ease);
+		}
+		.post-details {
+			position: absolute;
+			bottom: 2px;
+			left: 2px;
+			right: 2px;
+			background: fade(black, 30%);
+			padding: 20px 12px;
+			.transition(0.4s all ease);
+			h3 {
+				color: white;
+				text-transform: uppercase;
+				font-size: 14px;
+				line-height: 1em;
+				margin: 0;
+				font-weight: 300;
+			}
+			@media screen and (max-width: 767px) {
+				opacity: 1;
+				padding: 12px;
+			}
+		}
+		&:hover {
+			.post-details {
+				opacity: 0;
+			}
+			img {
+				filter: brightness(0.8);
+			}
+		}
+	}
+}
